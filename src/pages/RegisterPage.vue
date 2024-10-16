@@ -80,12 +80,12 @@ export default {
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background-color: #f0f0f0;
+  background-color: #ffffff;
 }
 
 .login-container {
   width: 400px;
-  background-color: #e0e0e0;
+  background-color: #f0f0f0;
   padding: 40px;
   border-radius: 8px;
   text-align: center;

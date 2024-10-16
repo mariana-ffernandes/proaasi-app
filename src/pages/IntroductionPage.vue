@@ -12,12 +12,12 @@
       <div class="module" @click="navigateToModule(1)">
         <h3>Módulo 1:</h3>
         <ul>
-          <li>O que é audição?</li>
-          <li>Como nós escutamos os sons?</li>
-          <li>O que é perda auditiva?</li>
-          <li>Quais os tipos de perdas auditivas?</li>
+          <li>1. O que é audição?</li>
+          <li>2. Como nós escutamos os sons?</li>
+          <li>3. O que é perda auditiva?</li>
+          <li>4. Quais os tipos de perdas auditivas?</li>
           <li>
-            Quais os comportamentos mais comuns que a pessoa com perda auditiva
+            5. Quais os comportamentos mais comuns que a pessoa com perda auditiva
             possui?
           </li>
         </ul>
@@ -26,9 +26,9 @@
       <div class="module" @click="navigateToModule(2)">
         <h3>Módulo 2:</h3>
         <ul>
-          <li>Para que serve o aparelho auditivo?</li>
-          <li>Benefícios do aparelho auditivo</li>
-          <li>Como escolher o aparelho auditivo</li>
+          <li>1. Para que serve o aparelho auditivo?</li>
+          <li>2. Benefícios do aparelho auditivo</li>
+          <li>3. Como escolher o aparelho auditivo</li>
         </ul>
       </div>
     </div>

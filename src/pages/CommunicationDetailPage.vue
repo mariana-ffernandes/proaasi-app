@@ -120,7 +120,7 @@
   }
   
   .navigation-buttons button:hover {
-    background-color: #3b8f5d;
+    background-color: #ebebeb;
   }
   
   .nav-icon {

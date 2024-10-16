@@ -66,11 +66,11 @@ export default {
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background-color: #f0f0f0;
+  background-color: #ffffff;
 }
 
 .login-container {
-  background-color: #e0e0e0;
+  background-color: #f0f0f0;
   padding: 40px;
   border-radius: 8px;
   text-align: center;
@@ -97,7 +97,7 @@ input[type="password"] {
   width: 100%;
   padding: 10px;
   border: 1px solid #ccc;
-  border-radius: 4px;
+  border-radius: 3px;
   margin-top: 5px;
 }
 

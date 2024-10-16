@@ -38,7 +38,6 @@
     },
     methods: {
       loadModuleContent() {
-        // Atribuindo links de vídeos do YouTube para cada módulo
         if (this.moduleNumber == 1) {
           this.moduleContent = `Audição é a capacidade que o ser humano possui de perceber os sons. E a orelha é o órgão responsável por essa capacidade. Sendo ela dividida em três partes: orelha externa, orelha média e orelha interna. As ondas sonoras são captadas pela orelha externa. Que é constituída pelo pavilhão auricular. E pelo meato acústico externo, um tubo que leva essas ondas sonoras até a membrana timpânica. A orelha média tem início na membrana timpânica, e envolve uma cavidade onde há pequenos ossos (ossículos) que ajudam na transmissão do som. A orelha interna é constituída pela cóclea, cuja função é “reconhecer” o som. E pelo nervo auditivo, que levará essa informação ao cérebro para processá-la.
 

@@ -55,7 +55,6 @@ export default {
       this.$router.push(`/usage/${this.$route.params.deviceName}`);
     },
     exit() {
-      // Lógica para sair da aplicação
       this.$router.push('/login');
     }
   }
