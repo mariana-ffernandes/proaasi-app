@@ -173,4 +173,157 @@ export default {
   color: #315d83;
   align-self: center;
 }
+
+/* Notebooks e Tablets (1024px - 769px) */
+@media (max-width: 1024px) {
+  .title {
+    font-size: 1.8rem;
+    margin-left: 20px;
+    justify-content: center;
+  }
+
+  .title-icon {
+    width: 120px;
+    margin-right: 15px;
+  }
+
+  .modules-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    margin: 20px 0;
+  }
+
+  .module {
+    width: 60%;
+    font-size: 18px;
+    padding: 15px;
+  }
+
+  .module h3 {
+    font-size: 25px;
+  }
+
+  .navigation-buttons {
+    flex-direction: row;
+    gap: 15px;
+  }
+
+  .navigation-buttons button {
+    padding: 10px 15px;
+    font-size: 0.9rem;
+  }
+
+  .nav-middle p {
+    font-size: 1.3rem;
+  }
+
+  .nav-icon {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 1.5rem;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-left: 0;
+  }
+
+  .title-icon {
+    width: 100px;
+    margin-bottom: 10px;
+  }
+
+  .modules-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin: 20px 0;
+  }
+
+  .module {
+    width: 80%;
+    font-size: 16px;
+    padding: 15px;
+  }
+
+  .module h3 {
+    font-size: 22px;
+  }
+
+  .navigation-buttons {
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .navigation-buttons button {
+    padding: 8px 12px;
+    font-size: 0.85rem;
+  }
+
+  .nav-middle p {
+    font-size: 1.2rem;
+  }
+
+  .nav-icon {
+    width: 25px;
+    height: 25px;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 1.2rem;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 30px 0;
+  }
+
+  .title-icon {
+    width: 100px;
+  }
+
+  .modules-container {
+    flex-direction: inherit;
+    align-items: center;   
+    gap: 30px;
+    margin: 20px 0;
+    max-height: max-content;
+  }
+
+  .module {
+    width: 80%;
+    font-size: 1rem;
+    padding: 20px;
+    max-width: 400px;
+  }
+
+  .module h3 {
+    font-size: 20px;
+  }
+
+  .navigation-buttons {
+    flex-direction:row;
+    gap: 10px;
+  }
+
+  .navigation-buttons button {
+    padding: 6px 10px;
+    font-size: 0.8rem;
+  }
+
+  .nav-middle p {
+    font-size: 1rem;
+  }
+
+  .nav-icon {
+    width: 20px;
+    height: 20px;
+  }
+}
 </style>

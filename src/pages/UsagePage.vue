@@ -71,7 +71,7 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 100vh;
+  background-color: #ffffff;
 }
 
 .title {
@@ -178,5 +178,157 @@ export default {
   font-weight: 600;
   color: #315d83;
   align-self: center;
+}
+
+/* Notebooks e Tablets (1024px - 769px) */
+@media (max-width: 1024px) {
+  .title {
+    font-size: 1.8rem;
+    margin-left: 20px;
+    justify-content: center;
+  }
+
+  .title-icon {
+    width: 120px;
+    margin-right: 15px;
+  }
+
+  .device-icons-container {
+    gap: 20px;
+    justify-content: center;
+  }
+
+  .device-option {
+    width: 250px;
+    height: 250px;
+    font-size: 1.6rem;
+  }
+
+  .device-icon {
+    width: 120px;
+    height: 120px;
+  }
+
+  .navigation-buttons {
+    flex-direction: row;
+    gap: 15px;
+  }
+
+  .navigation-buttons button {
+    padding: 10px 15px;
+    font-size: 0.9rem;
+  }
+
+  .nav-icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  .navigation-buttons p {
+    font-size: 1.3rem;
+  }
+}
+
+/* Celulares Grandes (768px - 481px) */
+@media (max-width: 768px) {
+  .title {
+    font-size: 1.5rem;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-left: 0;
+  }
+
+  .title-icon {
+    width: 100px;
+    margin-bottom: 10px;
+  }
+
+  .device-icons-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .device-option {
+    width: 220px;
+    height: 220px;
+    font-size: 1.4rem;
+  }
+
+  .device-icon {
+    width: 100px;
+    height: 100px;
+  }
+
+  .navigation-buttons {
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .navigation-buttons button {
+    padding: 8px 12px;
+    font-size: 0.85rem;
+  }
+
+  .nav-icon {
+    width: 25px;
+    height: 25px;
+  }
+
+  .navigation-buttons p {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 1.2rem;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 20px 0;
+  }
+
+  .title-icon {
+    width: 80px;
+  }
+
+  .device-icons-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .device-option {
+    width: 180px;
+    height: 180px;
+    font-size: 1rem;
+    padding: 8px;
+  }
+
+  .device-icon {
+    width: 80px;
+    height: 80px;
+  }
+
+  .navigation-buttons {
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .navigation-buttons button {
+    padding: 6px 10px;
+    font-size: 0.8rem;
+  }
+
+  .nav-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .navigation-buttons p {
+    font-size: 1rem;
+  }
 }
 </style>

@@ -67,7 +67,7 @@ export default {
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .header {
@@ -168,5 +168,148 @@ export default {
   font-weight: 600;
   color: #315d83;
   align-self: center;
+}
+
+/* Notebooks e Tablets (1024px - 769px) */
+@media (max-width: 1024px) {
+  .header {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  .title-icon {
+    width: 120px;
+    margin-bottom: 10px;
+  }
+
+  .header-title {
+    font-size: 2.5rem;
+  }
+
+  .options-container {
+    grid-template-columns: repeat(2, minmax(200px, 1fr));
+    gap: 20px;
+    margin: 20px 0;
+  }
+
+  .option {
+    font-size: 1.8rem;
+    padding: 20px;
+    height: 200px;
+  }
+
+  .navigation-buttons {
+    flex-direction: row;
+    gap: 15px;
+  }
+
+  .navigation-buttons button {
+    padding: 10px 15px;
+    font-size: 0.9rem;
+  }
+
+  .nav-icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  .nav-middle p {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+
+  .title-icon {
+    width: 100px;
+  }
+
+  .header-title {
+    font-size: 2rem;
+  }
+
+  .options-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin: 20px 0;
+  }
+
+  .option {
+    font-size: 1.6rem;
+    padding: 15px;
+    height: 180px;
+  }
+
+  .navigation-buttons {
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .navigation-buttons button {
+    padding: 8px 12px;
+    font-size: 0.85rem;
+  }
+
+  .nav-icon {
+    width: 25px;
+    height: 25px;
+  }
+
+  .nav-middle p {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  .title-icon {
+    width: 80px;
+  }
+
+  .header-title {
+    font-size: 1.8rem;
+  }
+
+  .options-container {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    margin: 15px 0;
+  }
+
+  .option {
+    font-size: 1.4rem;
+    padding: 10px;
+    height: 150px;
+  }
+
+  .navigation-buttons {
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .navigation-buttons button {
+    padding: 6px 10px;
+    font-size: 0.8rem;
+  }
+
+  .nav-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .nav-middle p {
+    font-size: 1rem;
+  }
 }
 </style>

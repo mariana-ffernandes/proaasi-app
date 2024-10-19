@@ -38,7 +38,7 @@ export default {
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background-color: #f0f0f0;
+  background-color: #ffffff;
 }
 
 .terms-container {
@@ -46,7 +46,7 @@ export default {
   padding: 40px;
   border-radius: 8px;
   text-align: center;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 2px 2px 10px rgba(46, 80, 177, 0.3);
 }
 
 .logo {
@@ -55,7 +55,7 @@ export default {
 }
 
 h2 {
-  color: #3a7bd5;
+  color: #2e5075;
   margin-bottom: 20px;
 }
 
@@ -69,8 +69,8 @@ h2 {
 .accept-button,
 .decline-button {
   background-color: #e0e0e0;
-  color: #3a7bd5;
-  border: 1px solid #3a7bd5;
+  color: #2e5075;
+  border: 1px solid #2e5075;
   padding: 10px 20px;
   border-radius: 4px;
   cursor: pointer;
@@ -78,7 +78,7 @@ h2 {
 
 .back-button {
   margin-top: 20px;
-  background-color: #3a7bd5;
+  background-color: #2e5075;
   color: white;
   border: none;
   padding: 10px 20px;

@@ -32,6 +32,7 @@
 </template>
 
 <script>
+
 export default {
   name: 'MainMenuPage',
   methods: {
@@ -52,7 +53,7 @@ export default {
   align-items: center;
   justify-content: space-between;
   height: 100vh;
-  background-color: #f0f0f0;
+  background-color: #ffffff;
 }
 
 .header {
@@ -120,20 +121,20 @@ h2 {
 }
 
 .logout-button {
-  background-color: #5e2a8c;
-  color: #ffffff;
-  font-weight: 600;
-  border: none;
+  background-color: #ffffff;
+  color: #05213b;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  border: 1px solid #4f0e81;
+  border-radius: 4px;
   padding: 10px 20px;
-  border-radius: 6px;
   cursor: pointer;
+  box-shadow: 4px 4px 1px #4f0e81;
+  transition: background-color 0.3s;
+  margin: 0 20px;
   margin-bottom: 20px;
-  transition: background-color 0.3s ease;
-}
-
-.logout-button:hover {
-  background-color: #820ec7;
-}
+  }
 
 .option-introduction {
   color: #0a8e7b;
@@ -157,5 +158,172 @@ h2 {
   color: #920b1f;
   font-size: 25px;
   font-weight: 600;
+}
+
+@media (max-width: 1024px) {
+  .header {
+    height: 120px;
+    padding: 15px 0;
+  }
+
+  .logo {
+    width: 90px;
+  }
+
+  .logo-text {
+    font-size: 3rem;
+    font-weight: 600;
+  }
+
+  h2 {
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+    margin-top: 15px;
+  }
+
+  .options {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+  }
+
+  .option img {
+    width: 180px;
+    height: 180px;
+    margin-bottom: 0%;
+  }
+
+  .option {
+    font-size: 1.8rem;
+    max-width: 220px;
+  }
+
+  .logout-button {
+  background-color: #ffffff;
+  color: #05213b;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  border: 1px solid #4f0e81;
+  border-radius: 4px;
+  padding: 10px 20px;
+  cursor: pointer;
+  box-shadow: 4px 4px 1px #4f0e81;
+  transition: background-color 0.3s;
+  margin: 0 20px;
+  margin-bottom: 20px;
+  }
+}
+
+/* Celulares Grandes (768px - 481px) */
+@media (max-width: 768px) {
+  .header {
+    height: 100px;
+    padding: 10px 0;
+  }
+
+  .logo {
+    width: 80px;
+  }
+
+  .logo-text {
+    font-size: 2rem;
+    font-weight: 600;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    margin-top: 20px;
+  }
+
+  .options {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .option img {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 0%;
+  }
+
+  .option {
+    font-size: 1.5rem;
+    max-width: 200px;
+  }
+
+  .logout-button {
+  background-color: #ffffff;
+  color: #05213b;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  border: 1px solid #4f0e81;
+  border-radius: 4px;
+  padding: 10px 20px;
+  cursor: pointer;
+  box-shadow: 4px 4px 1px #4f0e81;
+  transition: background-color 0.3s;
+  margin: 0 20px;
+  margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    height: 100px;
+    padding: 10px 0;
+  }
+
+  .logo {
+    width: 80px;
+  }
+
+  .logo-text {
+    font-size: 2rem;
+    font-weight: 600;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    margin-top: 20px;
+  }
+
+  .options {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .option img {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 0%;
+  }
+
+  .option {
+    font-size: 1.5rem;
+    max-width: 200px;
+  }
+
+  .logout-button {
+  background-color: #ffffff;
+  color: #05213b;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  border: 1px solid #4f0e81;
+  border-radius: 4px;
+  padding: 10px 20px;
+  cursor: pointer;
+  box-shadow: 4px 4px 1px #4f0e81;
+  transition: background-color 0.3s;
+  margin: 0 20px;
+  margin-bottom: 20px;
+  }
 }
 </style>

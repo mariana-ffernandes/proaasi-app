@@ -60,11 +60,11 @@ export default {
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background-color: #f0f0f0;
+  background-color: #ffffff;
 }
 
 .login-container {
-  background-color: #e0e0e0;
+  background-color: #f0f0f0;
   padding: 40px;
   border-radius: 8px;
   text-align: center;
@@ -77,7 +77,7 @@ export default {
 }
 
 h2 {
-  color: #4376a3;
+  color: #2e5075;
   margin-bottom: 20px;
 }
 
@@ -96,7 +96,7 @@ input[type="password"] {
 }
 
 .login-button {
-  background-color: #4376a3;
+  background-color: #2e5075;
   color: white;
   border: none;
   padding: 10px 20px;
@@ -112,13 +112,13 @@ input[type="password"] {
 }
 
 .extra-button {
-  color: #4376a3;
+  color: #2e5075;
   text-decoration: underline;
 }
 
 .back-button {
   margin-top: 20px;
-  background-color: #4376a3;
+  background-color: #2e5075;
   color: white;
   border: none;
   padding: 10px 20px;

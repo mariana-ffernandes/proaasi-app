@@ -50,7 +50,7 @@ export default {
             { name: "Trocar o filtro de cera" },
             { name: "Onde guardar o aparelho" },
             { name: "Pilha: tamanho e onde comprar" },
-            { name: "Colocar e retirar o aparelho" },
+            { name: "Como colocar e retirar o aparelho" },
           ],
         },
         "Miniretroauricular com tubo fino": {
@@ -62,7 +62,7 @@ export default {
             { name: "Limpar o tubo fino" },
             { name: "Retirar e colocar pilhas" },
             { name: "Pilha: tamanho e onde comprar" },
-            { name: "Colocar e retirar o aparelho" },
+            { name: "Como colocar e retirar o aparelho" },
           ],
         },
         "Miniretroauricular com receptor no canal": {
@@ -75,7 +75,7 @@ export default {
             { name: "Pilha: tamanho e onde comprar" },
             { name: "Identificar qual aparelho é de cada orelha" },
             { name: "Onde guardar o aparelho" },
-            { name: "Colocar e retirar o aparelho" },
+            { name: "Como colocar e retirar o aparelho" },
           ],
         },
         "Miniretroauricular com molde": {
@@ -88,7 +88,7 @@ export default {
             { name: "Onde guardar o aparelho" },
             { name: "Identificar qual aparelho é de cada orelha" },
             { name: "Pilha: tamanho e onde comprar" },
-            { name: "Colocar e retirar o aparelho" },
+            { name: "Como colocar e retirar o aparelho" },
             { name: "Trocar o tubo do molde" },
           ],
         },
@@ -142,11 +142,11 @@ export default {
 }
 
 .title-icon {
-  width: 150px;
+  width: 100px;
 }
 
 .header-title {
-  font-size: 3rem;
+  font-size: 2.5rem;
   color: #ac670b;
   font-weight: 600;
 }
@@ -160,9 +160,10 @@ export default {
   width: 100px;
 }
 
-.device-info h2 {
+.device-info h2 { 
   font-size: 2rem;
   color: #ac670b;
+  font-weight: 600;
 }
 
 .modules-container {
@@ -173,7 +174,7 @@ export default {
 }
 
 .module-option {
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 600;
   padding: 30px;
   background-color: #ffe0b2;
@@ -201,6 +202,7 @@ export default {
   font-size: 2rem;
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
+  margin-bottom: 30px;
 }
 
 .navigation-buttons button {
@@ -241,5 +243,177 @@ export default {
   font-weight: 600;
   color: #315d83;
   align-self: center;
+}
+
+@media (max-width: 1024px) {
+  .header {
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  .title-icon {
+    width: 80px;
+    margin-bottom: 10px;
+  }
+
+  .header-title {
+    font-size: 2rem;
+  }
+
+  
+  .device-info {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+  }
+
+  .device-info h2 {
+    font-size: 1.8rem;
+  }
+
+  .device-info-icon {
+  width: 50px;
+}
+
+  .modules-container {
+    grid-template-columns: repeat(2, minmax(200px, 1fr));
+    gap: 15px;
+    margin: 30px 0;
+  }
+
+  .module-option {
+    font-size: 1.8rem;
+    padding: 20px;
+    height: 200px;
+  }
+
+  .navigation-buttons {
+    flex-direction: row;
+    gap: 15px;
+  }
+
+  .navigation-buttons button {
+    padding: 10px 15px;
+    font-size: 0.9rem;
+  }
+
+  .nav-icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  .nav-middle p {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  .title-icon {
+    width: 60px;
+  }
+
+  .header-title {
+    font-size: 1.8rem;
+  }
+
+  .device-info h2 {
+    font-size: 1rem;
+  }
+
+  .device-info-icon {
+  width: 50px;
+}
+
+  .modules-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .module-option {
+    font-size: 1.6rem;
+    padding: 15px;
+    height: 180px;
+  }
+
+  .navigation-buttons {
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .navigation-buttons button {
+    padding: 8px 12px;
+    font-size: 0.85rem;
+  }
+
+  .nav-icon {
+    width: 25px;
+    height: 25px;
+  }
+
+  .nav-middle p {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+
+  .title-icon {
+    width: 100px;
+  }
+
+  .header-title {
+    font-size: 1.5rem;
+  }
+
+  .device-info h2 {
+    font-size: 0.5rem;
+  }
+
+  .device-info-icon {
+  width: 50px;
+}
+
+  .modules-container {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin: 20px 0;
+  }
+
+  .module-option {
+    font-size: 1.4rem;
+    padding: 10px;
+    height: 150px;
+  }
+
+  .navigation-buttons {
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .navigation-buttons button {
+    padding: 6px 10px;
+    font-size: 0.8rem;
+  }
+
+  .nav-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .nav-middle p {
+    font-size: 1rem;
+  }
 }
 </style>
