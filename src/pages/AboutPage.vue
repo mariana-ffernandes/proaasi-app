@@ -1,7 +1,7 @@
 <template>
   <div class="about-page">
     <div class="about-container">
-      <img src="@/assets/logo-proaasi.png" alt="ProAASI" class="logo" />
+      <img src="@/assets/proAASI-icon.svg" alt="ProAASI" class="logo" />
       <h2>Sobre o ProAASI</h2>
       <p>
         O Programa de Orientação e Adaptação do Aparelho de Amplificação Sonora Individual, o ProAASI, é um projeto desenvolvido na Faculdade de Odontologia de Bauru - Universidade de São Paulo, do departamento de Fonoaudiologia, orientado pela Professora Doutora Wanderleia Quinhoneiro Blasca. Seu objetivo é proporcionar informação sobre uso e manuseio do aparelho e estratégias de comunicação para o idoso usuário do AASI, bem como para o(a) parceiro(a) de comunicação. Dessa forma, proporcionar uma melhor qualidade de vida para eles(as).

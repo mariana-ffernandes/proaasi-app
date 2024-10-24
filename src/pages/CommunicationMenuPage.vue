@@ -3,7 +3,7 @@
     <div class="header">
       <div class="title-icon-container">
         <div class="icon-background">
-          <img src="@/assets/comunicacao.png" alt="Ícone Comunicação" class="title-icon" />
+          <img src="@/assets/communication-icon.svg" alt="Ícone Comunicação" class="title-icon" />
         </div>
         <h1 class="header-title">Estratégias de Comunicação - {{ role }}</h1>
       </div>
@@ -17,7 +17,7 @@
     <div class="navigation-buttons">
       <button @click="goBack">← voltar</button>
       <div class="nav-middle">
-        <img src="@/assets/logo-proaasi.png" alt="Ícone" class="nav-icon" />
+        <img src="@/assets/proAASI-icon.svg" alt="Ícone" class="nav-icon" />
         <p>ProAASI</p>
       </div>
       <button @click="exit">sair</button>
@@ -120,6 +120,7 @@ export default {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
+
 .navigation-buttons {
   display: flex;
   align-items: center;
@@ -128,6 +129,9 @@ export default {
   font-size: 2rem;
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
+  margin-bottom: 30px;
+  margin-top: 20px; 
+  padding-bottom: 20px;
 }
 
 .navigation-buttons button {

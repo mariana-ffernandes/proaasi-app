@@ -1,7 +1,7 @@
 <template>
   <div class="login-page">
     <div class="login-container">
-      <img src="@/assets/logo-proaasi.png" alt="ProAASI" class="logo" />
+      <img src="@/assets/proAASI-icon.svg" alt="ProAASI" class="logo" />
       <h2>Entrar</h2>
       <form @submit.prevent="login">
         <div class="input-group">

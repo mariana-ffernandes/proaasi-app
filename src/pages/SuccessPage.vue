@@ -1,7 +1,7 @@
 <template>
     <div class="success-page">
       <div class="success-container">
-        <img src="@/assets/logo-proaasi.png" alt="ProAASI" class="logo" />
+        <img src="@/assets/proAASI-icon.svg" alt="ProAASI" class="logo" />
         <div class="success-message">
           <h2>Cadastro realizado!</h2>
           <p>Bem-vindo(a) ao ProAASI</p>

@@ -1,7 +1,7 @@
 <template>
   <div class="faq-container">
     <div class="title">
-      <img src="@/assets/duvidas.png" alt="Ícone Dúvidas" class="title-icon" />
+      <img src="@/assets/faq-icon.svg" alt="faq-icon" class="title-icon">
       <h1>Dúvidas Frequentes</h1>
     </div>
     <div class="questions-container">
@@ -16,7 +16,7 @@
     </div>
     <div class="navigation-buttons">
       <button @click="goBack">← voltar</button>
-      <img src="@/assets/logo-proaasi.png" alt="Ícone" class="nav-icon" />
+      <img src="@/assets/proAASI-icon.svg" alt="Ícone" class="nav-icon" />
       <p>ProAASI</p>
       <button @click="exit">Sair</button>
     </div>
@@ -52,20 +52,20 @@ export default {
         {
           question:
             "Como faço para manter e cuidar dos meus aparelhos auditivos?",
-          videoUrl: "https://www.youtube.com/embed/video4",
+          videoUrl: "https://www.youtube.com/embed/icMKiO0k7rs",
           answer:
             "A manutenção inclui a limpeza regular, troca de pilhas ou recarga (dependendo do modelo), e seguir as instruções do fabricante. Consulte o fonoaudiólogo para orientações específicas.",
         },
         {
           question:
             "Como saber se você tem perda auditiva e precisa de um aparelho?",
-          videoUrl: "https://www.youtube.com/embed/video5",
+          videoUrl: "https://www.youtube.com/embed/1fJjT0gXt9A",
           answer:
             "Se você enfrenta dificuldades para ouvir conversas, sons cotidianos ou percebe a necessidade de aumentar constantemente o volume de dispositivos de áudio, é recomendável procurar um fonoaudiólogo para realizar uma avaliação audiológica e, assim, determinar se há uma perda auditiva e se ela requer aparelho.",
         },
         {
           question: "Como é o processo de adaptação aos aparelhos auditivos?",
-          videoUrl: "https://www.youtube.com/embed/video6",
+          videoUrl: "https://www.youtube.com/embed/_DCg3y2PND4",
           answer:
             "O período de adaptação varia, mas é essencial usar os aparelhos regularmente para que seu cérebro se acostume aos novos sons. Paciência e comunicação aberta com o profissional são fundamentais durante esse processo.",
         },
@@ -112,14 +112,13 @@ export default {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  margin-bottom: 10px;
-  margin-top: 50px;
+  margin-top: 20px;
   margin-left: 50px;
 }
 
 .title-icon {
   width: 150px;
-  margin-left: 10px;
+  margin-right: 20px;
 }
 
 .questions-container {
@@ -154,11 +153,13 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 30px;
   color: #05213b;
   font-size: 2rem;
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
+  margin-bottom: 30px;
+  margin-top: 20px; 
+  padding-bottom: 20px;
 }
 
 .navigation-buttons button {
@@ -284,7 +285,6 @@ export default {
     font-size: 1.2rem;
   }
 }
-
 
 @media (max-width: 480px) {
   .title {

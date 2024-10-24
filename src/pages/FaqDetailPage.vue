@@ -1,7 +1,11 @@
 <template>
     <div class="faq-detail-container">
       <div class="title">
-        <img src="@/assets/duvidas.png" alt="Ícone Dúvidas" class="title-icon" />
+        <div class="title-icon-container" @click="goBack" style="cursor: pointer">
+        <div class="icon-background">
+          <img src="@/assets/faq-icon.svg" alt="Voltar" class="title-icon" />
+        </div>
+      </div>
         <h1>Dúvidas Frequentes</h1>
       </div>
       <div class="content">
@@ -18,7 +22,7 @@
       </div>
       <div class="navigation-buttons">
       <button @click="goBack">← voltar</button>
-      <img src="@/assets/logo-proaasi.png" alt="Ícone" class="nav-icon" />
+      <img src="@/assets/proAASI-icon.svg" alt="Ícone" class="nav-icon" />
       <p>ProAASI</p>
       <button @click="exit">Sair</button>
     </div>
@@ -55,7 +59,12 @@
 
 .title-icon {
   width: 100px;
+  transition: transform 0.3s ease;
   margin-right: 10px;
+}
+
+.title-icon:hover {
+  transform: scale(1.1);
 }
 
 .content {

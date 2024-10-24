@@ -2,7 +2,7 @@
   <div class="usage-container">
     <div class="title">
       <img
-        src="@/assets/uso-e-manuseio.png"
+        src="@/assets/usage-icon.svg"
         alt="Ícone Uso"
         class="title-icon"
       />
@@ -24,7 +24,7 @@
 
     <div class="navigation-buttons">
       <button @click="goBack">← voltar</button>
-      <img src="@/assets/logo-proaasi.png" alt="Ícone" class="nav-icon" />
+      <img src="@/assets/proAASI-icon.svg" alt="Ícone" class="nav-icon" />
       <p>ProAASI</p>
       <button @click="exit">Sair</button>
     </div>
@@ -36,18 +36,18 @@ export default {
   data() {
     return {
       devices: [
-        { name: "Intra-aural", icon: require("@/assets/intra-aural-icon.png") },
+        { name: "Intra-aural", icon: require("@/assets/intra-aural-icon.svg") },
         {
           name: "Miniretroauricular com tubo fino",
-          icon: require("@/assets/mini-retro-icon.png"),
+          icon: require("@/assets/receptor-canal-icon.svg"),
         },
         {
           name: "Miniretroauricular com receptor no canal",
-          icon: require("@/assets/retroauricular-receptor-icon.png"),
+          icon: require("@/assets/receptor-canal-icon.svg"),
         },
         {
           name: "Miniretroauricular com molde",
-          icon: require("@/assets/retroauricular-molde-icon.png"),
+          icon: require("@/assets/com-molde-icon.svg"),
         },
       ],
     };
@@ -86,8 +86,7 @@ export default {
 }
 
 .title-icon {
-  width: 150px;
-  margin-left: 10px;
+  width: 200px;
 }
 
 .devices-menu {
@@ -98,13 +97,14 @@ export default {
 
 .device-icons-container {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
   gap: 30px;
 }
 
 .device-option {
-  font-size: 1.7rem;
+  font-size: 1.5rem;
   font-weight: 600;
   color: #ac670b;
   width: 300px;
@@ -116,6 +116,10 @@ export default {
   text-align: center;
   cursor: pointer;
   transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .device-option:hover {
@@ -126,7 +130,7 @@ export default {
 .device-icon {
   width: 150px;
   height: 150px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   transition: transform 0.3s;
 }
 

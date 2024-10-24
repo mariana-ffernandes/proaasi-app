@@ -2,7 +2,7 @@
   <div class="dashboard-page">
     <div class="header">
       <div class="logo-container">
-        <img src="@/assets/logo-proaasi.png" alt="ProAASI" class="logo" />
+        <img src="@/assets/proAASI-icon.svg" alt="ProAASI" class="logo" />
         <span class="logo-text">ProAASI</span>
       </div>
     </div>
@@ -10,19 +10,19 @@
       <h2>O que gostaria de acessar?</h2>
       <div class="options">
         <div class="option-introduction option" @click="goToContent('introduction')">
-          <img src="@/assets/introducao.png" alt="Introdução ao Conteúdo" class="icon" />
+          <img src="@/assets/introduction-icon.svg" alt="Introdução ao Conteúdo" class="icon" />
           <p>Introdução ao Conteúdo</p>
         </div>
         <div class="option-usage option" @click="goToContent('usage')">
-          <img src="@/assets/uso-e-manuseio.png" alt="Uso e Manuseio do Aparelho" class="icon" />
+          <img src="@/assets/usage-icon.svg" alt="Uso e Manuseio do Aparelho" class="icon" />
           <p>Uso e Manuseio do Aparelho</p>
         </div>
         <div class="option-communication option" @click="goToContent('communication')">
-          <img src="@/assets/comunicacao.png" alt="Estratégias de Comunicação" class="icon" />
+          <img src="@/assets/communication-icon.svg" alt="Estratégias de Comunicação" class="icon" />
           <p>Estratégias de Comunicação</p>
         </div>
         <div class="option-faq option" @click="goToContent('faq')">
-          <img src="@/assets/duvidas.png" alt="Dúvidas Frequentes" class="icon" />
+          <img src="@/assets/faq-icon.svg" alt="Dúvidas Frequentes" class="icon" />
           <p>Dúvidas Frequentes</p>
         </div>
       </div>
@@ -126,7 +126,6 @@ h2 {
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
   font-size: 1rem;
-  border: 1px solid #4f0e81;
   border-radius: 4px;
   padding: 10px 20px;
   cursor: pointer;
@@ -205,7 +204,6 @@ h2 {
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
   font-size: 1rem;
-  border: 1px solid #4f0e81;
   border-radius: 4px;
   padding: 10px 20px;
   cursor: pointer;
@@ -260,8 +258,6 @@ h2 {
   color: #05213b;
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
-  font-size: 1rem;
-  border: 1px solid #4f0e81;
   border-radius: 4px;
   padding: 10px 20px;
   cursor: pointer;
@@ -316,7 +312,6 @@ h2 {
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
   font-size: 1rem;
-  border: 1px solid #4f0e81;
   border-radius: 4px;
   padding: 10px 20px;
   cursor: pointer;

@@ -2,16 +2,17 @@
   <div class="communication-container">
     <div class="title">
       <img
-        src="@/assets/comunicacao.png"
-        alt="Ícone Estratégias"
+        src="@/assets/communication-icon.svg"
+        alt="Voltar"
         class="title-icon"
       />
+
       <h1>Estratégias de Comunicação</h1>
     </div>
     <div class="role-selection">
       <div class="role-option" @click="selectRole('Usuário do aparelho')">
         <img
-          src="@/assets/user-communication-icon.png"
+          src="@/assets/user-icon.svg"
           alt="Usuário do aparelho"
           class="role-icon"
         />
@@ -22,7 +23,7 @@
         @click="selectRole('Parceiro(a) de comunicação')"
       >
         <img
-          src="@/assets/partner-icon.png"
+          src="@/assets/partner-icon.svg"
           alt="Parceiro(a) de comunicação"
           class="role-icon"
         />
@@ -31,7 +32,7 @@
     </div>
     <div class="navigation-buttons">
       <button @click="goBack">← voltar</button>
-      <img src="@/assets/logo-proaasi.png" alt="Ícone" class="nav-icon" />
+      <img src="@/assets/proAASI-icon.svg" alt="Ícone" class="nav-icon" />
       <p>ProAASI</p>
       <button @click="exit">Sair</button>
     </div>
@@ -80,7 +81,6 @@ export default {
 
 .title-icon {
   width: 150px;
-  margin-left: 10px;
 }
 
 .role-selection {
@@ -125,11 +125,13 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 30px;
   color: #05213b;
   font-size: 2rem;
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
+  margin-bottom: 30px;
+  margin-top: 20px;
+  padding-bottom: 20px;
 }
 
 .navigation-buttons button {
@@ -273,8 +275,8 @@ export default {
     flex-direction: column;
     justify-content: space-around;
     height: 100vh;
-}
-  
+  }
+
   .title {
     font-size: 1.2rem;
     flex-direction: column;

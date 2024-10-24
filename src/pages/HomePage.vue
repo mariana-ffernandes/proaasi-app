@@ -5,7 +5,7 @@
         <div class="header-container">
           <div class="logo-container">
             <img
-              src="@/assets/logo-proaasi.png"
+              src="@/assets/proAASI-icon.svg"
               alt="ProAASI Logo"
               class="logo"
             />

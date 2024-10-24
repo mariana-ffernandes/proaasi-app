@@ -1,9 +1,9 @@
 <template>
   <div class="device-menu-container">
     <div class="header">
-      <div class="title-icon-container">
+      <div class="title-icon-container" @click="goBack" style="cursor: pointer;">
         <div class="icon-background">
-          <img src="@/assets/uso-e-manuseio.png" alt="deviceName" class="title-icon" />
+          <img src="@/assets/usage-icon.svg" alt="Voltar" class="title-icon" />
         </div>
         <h1 class="header-title">Uso e Manuseio do Aparelho</h1>
       </div>
@@ -26,7 +26,7 @@
     <div class="navigation-buttons">
       <button @click="goBack">← voltar</button>
       <div class="nav-middle">
-        <img src="@/assets/logo-proaasi.png" alt="Ícone" class="nav-icon" />
+        <img src="@/assets/proAASI-icon.svg" alt="Ícone" class="nav-icon" />
         <p>ProAASI</p>
       </div>
       <button @click="exit">sair</button>
@@ -41,7 +41,7 @@ export default {
     return {
       devicesData: {
         "Intra-aural": {
-          icon: require("@/assets/intra-aural-icon.png"),
+          icon: require("@/assets/intra-aural-icon.svg"),
           modules: [
             { name: "Desligar e ligar o aparelho" },
             { name: "Identificar qual aparelho é de cada orelha" },
@@ -54,7 +54,7 @@ export default {
           ],
         },
         "Miniretroauricular com tubo fino": {
-          icon: require("@/assets/mini-retro-icon.png"),
+          icon: require("@/assets/receptor-canal-icon.svg"),
           modules: [
             { name: "Desligar e ligar o aparelho" },
             { name: "Limpar a oliva" },
@@ -66,7 +66,7 @@ export default {
           ],
         },
         "Miniretroauricular com receptor no canal": {
-          icon: require("@/assets/retroauricular-receptor-icon.png"),
+          icon: require("@/assets/receptor-canal-icon.svg"),
           modules: [
             { name: "Desligar e ligar o aparelho" },
             { name: "Limpar a oliva" },
@@ -79,7 +79,7 @@ export default {
           ],
         },
         "Miniretroauricular com molde": {
-          icon: require("@/assets/retroauricular-molde-icon.png"),
+          icon: require("@/assets/com-molde-icon.svg"),
           modules: [
             { name: "Desligar e ligar o aparelho" },
             { name: "Limpar o aparelho" },
@@ -142,11 +142,16 @@ export default {
 }
 
 .title-icon {
-  width: 100px;
+  width: 150px;
+  transition: transform 0.3s ease;
+}
+
+.title-icon:hover {
+  transform: scale(1.1);
 }
 
 .header-title {
-  font-size: 2.5rem;
+  font-size: 3rem;
   color: #ac670b;
   font-weight: 600;
 }
@@ -157,11 +162,11 @@ export default {
 }
 
 .device-info-icon {
-  width: 100px;
+  width: 75px;
 }
 
 .device-info h2 { 
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: #ac670b;
   font-weight: 600;
 }
@@ -203,6 +208,8 @@ export default {
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
   margin-bottom: 30px;
+  margin-top: 20px; 
+  padding-bottom: 20px;
 }
 
 .navigation-buttons button {
@@ -269,7 +276,7 @@ export default {
   }
 
   .device-info h2 {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
   }
 
   .device-info-icon {
@@ -364,21 +371,29 @@ export default {
 
 @media (max-width: 480px) {
   .header {
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
-    margin-bottom: 15px;
   }
 
   .title-icon {
-    width: 100px;
+    width: 60px;
   }
 
   .header-title {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
+    margin-left: 10px;
   }
 
+  .device-info {
+        flex-direction: row;
+        align-items: center;
+        margin-top: 10px;
+        
+      }
+
   .device-info h2 {
-    font-size: 0.5rem;
+    font-size: 1rem;
+    margin-left: 10px;
   }
 
   .device-info-icon {

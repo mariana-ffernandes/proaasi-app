@@ -1,7 +1,7 @@
 <template>
   <div class="terms-page">
     <div class="terms-container">
-      <img src="@/assets/logo-proaasi.png" alt="ProAASI" class="logo" />
+      <img src="@/assets/proAASI-icon.svg" alt="ProAASI" class="logo" />
       <h2>Termos</h2>
       <div class="terms-buttons">
         <button @click="acceptTerms" class="accept-button">Aceito</button>

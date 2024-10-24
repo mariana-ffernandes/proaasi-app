@@ -1,7 +1,11 @@
 <template>
     <div class="detail-container">
       <div class="title">
-        <img src="@/assets/comunicacao.png" alt="Ícone Estratégias" class="title-icon" />
+        <div class="title-icon-container" @click="goBack" style="cursor: pointer">
+        <div class="icon-background">
+          <img src="@/assets/communication-icon.svg" alt="Voltar" class="title-icon" />
+        </div>
+      </div>
         <h1>{{ option }}</h1>
       </div>
       <div class="content">
@@ -18,7 +22,7 @@
       </div>
       <div class="navigation-buttons">
       <button @click="goBack">← voltar</button>
-      <img src="@/assets/logo-proaasi.png" alt="Ícone" class="nav-icon" />
+      <img src="@/assets/proAASI-icon.svg" alt="Ícone" class="nav-icon" />
       <p>ProAASI</p>
       <button @click="exit">Sair</button>
     </div>
@@ -74,7 +78,12 @@
 
 .title-icon {
   width: 100px;
+  transition: transform 0.3s ease;
   margin-right: 10px;
+}
+
+.title-icon:hover {
+  transform: scale(1.1);
 }
 
 .content {
@@ -104,11 +113,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 30px;
   color: #05213b;
   font-size: 2rem;
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
+  margin-bottom: 30px;
+  margin-top: 20px; 
+  padding-bottom: 20px;
 }
 
 .navigation-buttons button {

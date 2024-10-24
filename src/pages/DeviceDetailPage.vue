@@ -1,7 +1,7 @@
 <template>
   <div class="detail-container">
     <div class="title">
-      <img src="@/assets/uso-e-manuseio.png" alt="Ícone Uso" class="title-icon" />
+      <img src="@/assets/usage-icon.svg" alt="Ícone Uso" class="title-icon" />
       <h1>{{ option }}</h1>
     </div>
     <div class="content">
@@ -18,7 +18,7 @@
     </div>
     <div class="navigation-buttons">
       <button @click="goBack">← voltar</button>
-      <img src="@/assets/logo-proaasi.png" alt="Ícone" class="nav-icon" />
+      <img src="@/assets/proAASI-icon.svg" alt="Ícone" class="nav-icon" />
       <p>ProAASI</p>
       <button @click="exit">Sair</button>
     </div>

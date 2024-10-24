@@ -2,7 +2,7 @@
     <div class="module-container">
       <div class="header">
         <div class="title">
-          <img src="@/assets/introducao.png" alt="Ícone Introdução" class="title-icon" />
+          <img src="@/assets/introduction-icon.svg" alt="Ícone Introdução" class="title-icon" />
           <h1>Introdução ao Conteúdo</h1>
         </div>
         <iframe
@@ -20,7 +20,7 @@
   
       <div class="navigation-buttons">
         <button @click="goBack">← voltar</button>
-        <img src="@/assets/logo-proaasi.png" alt="Ícone" class="nav-icon" />
+        <img src="@/assets/proAASI-icon.svg" alt="Ícone" class="nav-icon" />
         <p>ProAASI</p>
         <button @click="exit">Sair</button>
       </div>
