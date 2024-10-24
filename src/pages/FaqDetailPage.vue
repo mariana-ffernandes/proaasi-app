@@ -1,7 +1,7 @@
 <template>
     <div class="faq-detail-container">
       <div class="title">
-        <img src="@/assets/faq-icon.png" alt="Ícone Dúvidas" class="title-icon" />
+        <img src="@/assets/duvidas.png" alt="Ícone Dúvidas" class="title-icon" />
         <h1>Dúvidas Frequentes</h1>
       </div>
       <div class="content">
