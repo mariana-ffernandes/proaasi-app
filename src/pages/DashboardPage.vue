@@ -133,6 +133,7 @@ h2 {
   transition: background-color 0.3s;
   margin: 0 20px;
   margin-bottom: 20px;
+  border: none;
   }
 
 .option-introduction {

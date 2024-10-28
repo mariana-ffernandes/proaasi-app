@@ -2,7 +2,11 @@
     <div class="module-container">
       <div class="header">
         <div class="title">
-          <img src="@/assets/introduction-icon.svg" alt="Ícone Introdução" class="title-icon" />
+          <div class="title-icon-container" @click="goBack" style="cursor: pointer;">
+        <div class="icon-background">
+          <img src="@/assets/introduction-icon.svg" alt="Voltar" class="title-icon" />
+        </div>
+      </div>
           <h1>Introdução ao Conteúdo</h1>
         </div>
         <iframe
@@ -82,8 +86,12 @@ Benefícios do AASI: Melhora na Audição: O AASI proporciona uma melhoria signi
 }
 
 .title-icon {
-  width: 200px;
-  margin-right: 20px;
+  width: 100px;
+  transition: transform 0.3s ease;
+  }
+
+.title-icon:hover {
+  transform: scale(1.1);
 }
 
 .video-iframe {
@@ -103,7 +111,7 @@ Benefícios do AASI: Melhora na Audição: O AASI proporciona uma melhoria signi
   font-size: 20px;
   font-weight: 600;
   text-align: left;
-  margin: 20px 0;
+  margin: 120px 40px 40px 40px;
   padding: 20px;
   background-color: #f0f8ff;
   border-radius: 10px;

@@ -1,7 +1,11 @@
 <template>
   <div class="detail-container">
     <div class="title">
-      <img src="@/assets/usage-icon.svg" alt="Ícone Uso" class="title-icon" />
+      <div class="title-icon-container" @click="goBack" style="cursor: pointer;">
+        <div class="icon-background">
+          <img src="@/assets/usage-icon.svg" alt="Voltar" class="title-icon" />
+        </div>
+      </div>
       <h1>{{ option }}</h1>
     </div>
     <div class="content">
@@ -77,9 +81,12 @@ export default {
 
 .title-icon {
   width: 100px;
-  margin-right: 10px;
-}
+  transition: transform 0.3s ease;
+  }
 
+.title-icon:hover {
+  transform: scale(1.1);
+}
 .video-iframe {
   width: 50%;
   height: 400px;
@@ -149,7 +156,6 @@ export default {
   align-self: center;
 }
 
-/* Notebooks e Tablets (1024px - 769px) */
 @media (max-width: 1024px) {
   .title {
     flex-direction: row;
@@ -203,7 +209,6 @@ export default {
   }
 }
 
-/* Celulares Grandes (768px - 481px) */
 @media (max-width: 768px) {
   .title {
     flex-direction: row;

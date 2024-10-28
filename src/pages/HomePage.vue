@@ -1,32 +1,38 @@
 <template>
   <div class="home-page">
-    <div class="content-container">
-      <div class="left-side">
-        <div class="header-container">
-          <div class="logo-container">
-            <img
-              src="@/assets/proAASI-icon.svg"
-              alt="ProAASI Logo"
-              class="logo"
-            />
-          </div>
-          <h1 class="title">Pro<br />AASI</h1>
+
+    <div class="loading-screen" v-if="isLoading">
+      <div class="header-container">
+        <div class="logo-container">
+          <img
+            src="@/assets/proAASI-icon.svg"
+            alt="ProAASI Logo"
+            class="logo"
+          />
         </div>
-        <p class="subtitle">
-          Programa de Orientação e Adaptação do Aparelho de Amplificação Sonora
-          Individual
-        </p>
+        <h1 class="loading-title">Bem vindo(a) ao ProAASI</h1>
       </div>
-      <div class="right-side">
-        <div class="buttons-wrapper">
-          <div class="buttons-container">
-            <router-link to="/login" class="button">Entrar</router-link>
-            <router-link to="/register" class="button">Cadastrar</router-link>
-            <router-link to="/about" class="button"
-              >Sobre o ProAASI</router-link
-            >
-          </div>
+    </div>
+
+    <div class="container" v-else>
+      <div class="header-container">
+        <div class="logo-container">
+          <img
+            src="@/assets/proAASI-icon.svg"
+            alt="ProAASI Logo"
+            class="logo"
+          />
         </div>
+        <h1 class="title">ProAASI</h1>
+      </div>
+      <p class="subtitle">
+        Programa de Orientação e Adaptação do Aparelho de Amplificação Sonora
+        Individual
+      </p>
+      <div class="buttons-container">
+        <router-link to="/login" class="button">Entrar</router-link>
+        <router-link to="/register" class="button">Cadastrar</router-link>
+        <router-link to="/about" class="button">Sobre o ProAASI</router-link>
       </div>
     </div>
   </div>
@@ -35,13 +41,32 @@
 <script>
 export default {
   name: "HomePage",
+  data() {
+    return {
+      isLoading: true,
+    };
+  },
+  mounted() {
+    setTimeout(() => {
+      this.isLoading = false; 
+      this.$nextTick(() => {
+        const container = this.$el.querySelector(".container");
+        if (container) {
+          console.log("Container encontrado. Adicionando classe expand.");
+          container.classList.add("expand"); 
+        } else {
+          console.error("Container não encontrado.");
+        }
+      });
+    }, 3000); 
+  },
 };
 </script>
+
 
 <style scoped>
 .home-page {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100vh;
@@ -51,217 +76,158 @@ export default {
   padding: 20px;
 }
 
-.content-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  max-width: 1200px;
-  flex-wrap: wrap;
+.loading-screen {
+  text-align: center;
 }
 
-.left-side {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 10px;
-  flex: 1;
+.container {
+  background-color: #f8f8f8;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 90%;
+  max-width: 400px;
+  transform: scale(0.5);
+  opacity: 0; 
+  transition: transform 1s ease-out, opacity 1s ease-out; 
+}
+
+.container.expand {
+  transform: scale(1); 
+  opacity: 1;
 }
 
 .header-container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
-  gap: 10px;
+  margin-bottom: 10px;
 }
 
 .logo {
-  width: 200px;
+  width: 100px;
+  margin-bottom: 10px;
+}
+
+.loading-title {
+  font-size: 4rem;
+  font-weight: bold;
+  color: #ffffff;
+  line-height: 1.2;
 }
 
 .title {
-  color: #ffffff;
-  font-family: "Montserrat", sans-serif;
-  font-size: 6rem;
-  font-weight: 500;
-  line-height: 1;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #4376a3;
+  line-height: 1.2;
 }
 
 .subtitle {
-  color: #ffffff;
-  font-family: "Montserrat", sans-serif;
-  font-size: 1.7rem;
-  font-weight: 600;
-  text-align: center;
-  max-width: 80%;
-}
-
-.right-side {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #4376a3;
+  margin-bottom: 40px;
 }
 
 .buttons-container {
-  width: 35rem;
-  margin-top: 20px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  background-color: #4376a3;
-  padding: 30px;
-  border-radius: none;
+  gap: 15px;
 }
 
 .button {
-  font-family: "Montserrat", sans-serif;
-  font-size: 1.5rem;
-  font-weight: 500;
-  color: #000000;
-  margin: 10px 0;
-  width: 80%;
-  max-width: 30rem;
-  padding: 20px;
-  background-color: #ffffff;
+  background-color: #4376a3;
+  color: #ffffff;
+  font-weight: bold;
   border: none;
-  box-shadow: 5px 6px 1px 1px #05213b;
+  border-radius: 3px;
+  padding: 15px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
   text-align: center;
+  font-size: 1.1rem;
+  box-shadow: 4px 4px 1px #05213b;
 }
 
 .button:hover {
-  background-color: #d6d6d6;
-  color: #333;
+  background-color: #05213b;
+  box-shadow: 4px 4px 1px #4376a3;
 }
 
-/* tablet */
+@keyframes expandAnimation {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.container {
+  background-color: #f8f8f8;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 90%;
+  max-width: 400px;
+  opacity: 0; /* Inicialmente invisível */
+}
+
+.container.expand {
+  animation: expandAnimation 1s ease-out forwards; /* Animação de expansão com keyframes */
+}
+
+
 @media (max-width: 1024px) {
-  .content-container {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+  .container {
     padding: 20px;
-  }
-
-  .header-container {
-    flex-direction: row;
-    align-items: center;
-    gap: 10px;
-    justify-content: center;
-  }
-
-  .left-side {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    flex: 1;
-    margin-bottom: 300px;
+    max-width: 600px;
   }
 
   .logo {
-    width: 120px;
+    width: 80px;
   }
 
   .title {
-    font-size: 4rem;
+    font-size: 2rem;
   }
 
   .subtitle {
-    font-size: 1.5rem;
-    max-width: 90%;
-  }
-
-  .right-side {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    padding: 10px;
-    background-color: #4376a3;
-  }
-
-  .buttons-container {
-    width: 100%;
-    max-width: 400px;
-    padding: 15px;
-    box-shadow: none;
+    font-size: 0.9rem;
   }
 
   .button {
-    font-size: 1.4rem;
-    padding: 15px;
-    width: 120%;
-    max-width: 300px;
-    margin: 10px 0;
+    font-size: 1rem;
+    padding: 12px;
   }
 }
 
-/* celular */
 @media (max-width: 480px) {
-  .content-container {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 10px;
-  }
-
-  .header-container {
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .left-side {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    flex: 1;
-    margin-bottom: 300px;
+  .container {
+    padding: 15px;
   }
 
   .logo {
-    width: 120px;
+    width: 70px;
   }
 
   .title {
-    font-size: 4rem;
-    font-weight: 600;
-    align-self: center;
+    font-size: 1.8rem;
   }
 
   .subtitle {
-    font-size: 1.5rem;
-    max-width: 95%;
-  }
-
-  .right-side {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    padding: 10px;
-    background-color: #4376a3;
-  }
-
-  .buttons-container {
-    width: 100%;
-    padding: 10px;
-    box-shadow: none;
+    font-size: 0.8rem;
   }
 
   .button {
-    font-size: 1.8rem;
-    padding: 12px;
-    width: 120%;
+    font-size: 0.9rem;
+    padding: 10px;
   }
 }
 </style>
