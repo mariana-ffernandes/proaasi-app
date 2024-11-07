@@ -1,15 +1,21 @@
 <template>
   <div class="menu-container">
     <div class="header">
-      <div class="title-icon-container">
+      <div class="title-icon-container" @click="goBack" style="cursor: pointer">
         <div class="icon-background">
-          <img src="@/assets/communication-icon.svg" alt="Ícone Comunicação" class="title-icon" />
+          <img src="@/assets/communication-icon.svg" alt="Voltar" class="title-icon" />
         </div>
+
         <h1 class="header-title">Estratégias de Comunicação - {{ role }}</h1>
       </div>
     </div>
     <div class="options-container">
-      <div class="option" v-for="(item, index) in options" :key="index" @click="selectOption(item)">
+      <div
+        class="option"
+        v-for="(item, index) in options"
+        :key="index"
+        @click="selectOption(item)"
+      >
         <p>{{ item }}</p>
       </div>
     </div>
@@ -26,14 +32,14 @@
 </template>
 
 <script>
-import communicationData from '@/communication-strategies-data.json';
+import communicationData from "@/communication-strategies-data.json";
 
 export default {
   data() {
     return {
       role: this.$route.params.role,
       options: [],
-      icon: '@/assets/communication-strategies-icon.png'
+      icon: "@/assets/communication-strategies-icon.png",
     };
   },
   created() {
@@ -49,12 +55,12 @@ export default {
       this.$router.push(`/communication/${this.role}/${option}`);
     },
     goBack() {
-      this.$router.push('/communication');
+      this.$router.push("/communication");
     },
     exit() {
-      this.$router.push('/login');
-    }
-  }
+      this.$router.push("/login");
+    },
+  },
 };
 </script>
 
@@ -84,6 +90,11 @@ export default {
 
 .title-icon {
   width: 150px;
+  transition: transform 0.3s ease;
+}
+
+.title-icon:hover {
+  transform: scale(1.1);
 }
 
 .header-title {
@@ -120,7 +131,6 @@ export default {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-
 .navigation-buttons {
   display: flex;
   align-items: center;
@@ -130,7 +140,7 @@ export default {
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
   margin-bottom: 30px;
-  margin-top: 20px; 
+  margin-top: 20px;
   padding-bottom: 20px;
 }
 

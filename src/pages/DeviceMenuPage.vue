@@ -1,9 +1,9 @@
 <template>
   <div class="device-menu-container">
     <div class="header">
-      <div class="title-icon-container">
+      <div class="title-icon-container" @click="goBack" style="cursor: pointer">
         <div class="icon-background">
-          <img src="@/assets/usage-icon.svg" alt="Ícone Comunicação" class="title-icon" />
+          <img src="@/assets/usage-icon.svg" alt="Voltar" class="title-icon" />
         </div>
         <h1 class="header-title">Uso e Manuseio do Aparelho</h1>
       </div>
@@ -143,6 +143,11 @@ export default {
 
 .title-icon {
   width: 150px;
+  transition: transform 0.3s ease;
+}
+
+.title-icon:hover {
+  transform: scale(1.1);
 }
 
 .header-title {
@@ -160,7 +165,7 @@ export default {
   width: 75px;
 }
 
-.device-info h2 { 
+.device-info h2 {
   font-size: 1.5rem;
   color: #ac670b;
   font-weight: 600;
@@ -203,7 +208,7 @@ export default {
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
   margin-bottom: 30px;
-  margin-top: 20px; 
+  margin-top: 20px;
   padding-bottom: 20px;
 }
 
@@ -263,7 +268,6 @@ export default {
     font-size: 2rem;
   }
 
-  
   .device-info {
     flex-direction: column;
     align-items: center;
@@ -275,8 +279,8 @@ export default {
   }
 
   .device-info-icon {
-  width: 50px;
-}
+    width: 50px;
+  }
 
   .modules-container {
     grid-template-columns: repeat(2, minmax(200px, 1fr));
@@ -330,8 +334,8 @@ export default {
   }
 
   .device-info-icon {
-  width: 50px;
-}
+    width: 50px;
+  }
 
   .modules-container {
     grid-template-columns: 1fr;
@@ -380,11 +384,10 @@ export default {
   }
 
   .device-info {
-        flex-direction: row;
-        align-items: center;
-        margin-top: 10px;
-        
-      }
+    flex-direction: row;
+    align-items: center;
+    margin-top: 10px;
+  }
 
   .device-info h2 {
     font-size: 1rem;
@@ -392,8 +395,8 @@ export default {
   }
 
   .device-info-icon {
-  width: 50px;
-}
+    width: 50px;
+  }
 
   .modules-container {
     grid-template-columns: 1fr;

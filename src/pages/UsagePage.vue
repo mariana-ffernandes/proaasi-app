@@ -1,11 +1,19 @@
 <template>
   <div class="usage-container">
     <div class="title">
-      <img
-        src="@/assets/usage-icon.svg"
-        alt="Ícone Uso"
-        class="title-icon"
-      />
+      <div
+          class="title-icon-container"
+          @click="goBack"
+          style="cursor: pointer"
+        >
+          <div class="icon-background">
+            <img
+              src="@/assets/usage-icon.svg"
+              alt="Voltar"
+              class="title-icon"
+            />
+        </div>
+      </div>
       <h1>Uso e Manuseio do Aparelho</h1>
     </div>
     <div class="devices-menu">
@@ -87,6 +95,11 @@ export default {
 
 .title-icon {
   width: 200px;
+  transition: transform 0.3s ease;
+}
+
+.title-icon:hover {
+  transform: scale(1.1);
 }
 
 .devices-menu {

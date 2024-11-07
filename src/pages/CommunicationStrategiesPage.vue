@@ -1,12 +1,19 @@
 <template>
   <div class="communication-container">
     <div class="title">
-      <img
-        src="@/assets/communication-icon.svg"
-        alt="Voltar"
-        class="title-icon"
-      />
-
+      <div
+          class="title-icon-container"
+          @click="goBack"
+          style="cursor: pointer"
+        >
+          <div class="icon-background">
+            <img
+              src="@/assets/communication-icon.svg"
+              alt="Voltar"
+              class="title-icon"
+            />
+        </div>
+      </div>
       <h1>Estratégias de Comunicação</h1>
     </div>
     <div class="role-selection">
@@ -80,7 +87,12 @@ export default {
 }
 
 .title-icon {
-  width: 150px;
+  width: 200px;
+  transition: transform 0.3s ease;
+}
+
+.title-icon:hover {
+  transform: scale(1.1);
 }
 
 .role-selection {

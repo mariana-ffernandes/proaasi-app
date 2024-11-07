@@ -1,7 +1,19 @@
 <template>
   <div class="faq-container">
     <div class="title">
-      <img src="@/assets/faq-icon.svg" alt="faq-icon" class="title-icon">
+      <div
+          class="title-icon-container"
+          @click="goBack"
+          style="cursor: pointer"
+        >
+          <div class="icon-background">
+            <img
+              src="@/assets/faq-icon.svg"
+              alt="Voltar"
+              class="title-icon"
+            />
+        </div>
+      </div>
       <h1>Dúvidas Frequentes</h1>
     </div>
     <div class="questions-container">
@@ -117,8 +129,13 @@ export default {
 }
 
 .title-icon {
-  width: 150px;
+  width: 200px;
   margin-right: 20px;
+  transition: transform 0.3s ease;
+}
+
+.title-icon:hover {
+  transform: scale(1.1);
 }
 
 .questions-container {

@@ -31,7 +31,7 @@
       </p>
       <div class="buttons-container">
         <router-link to="/login" class="button">Entrar</router-link>
-        <router-link to="/register" class="button">Cadastrar</router-link>
+        <!-- <router-link to="/register" class="button">Cadastrar</router-link> -->
         <router-link to="/about" class="button">Sobre o ProAASI</router-link>
       </div>
     </div>
@@ -71,7 +71,7 @@ export default {
   justify-content: center;
   height: 100vh;
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("@/assets/background-proaasi.jpg") no-repeat center center;
+    url("@/assets/background.svg") no-repeat center center;
   background-size: cover;
   padding: 20px;
 }

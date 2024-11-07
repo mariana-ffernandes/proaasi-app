@@ -1,9 +1,17 @@
 <template>
   <div class="introduction-container">
     <div class="title">
-      <div class="title-icon-container">
-        <div class="icon-background">
-          <img src="@/assets/introduction-icon.svg" alt="Voltar" class="title-icon" />
+          <div
+          class="title-icon-container"
+          @click="goBack"
+          style="cursor: pointer"
+        >
+          <div class="icon-background">
+            <img
+              src="@/assets/introduction-icon.svg"
+              alt="Voltar"
+              class="title-icon"
+            />
         </div>
       </div>
       <h1>Introdução ao Conteúdo</h1>
@@ -79,7 +87,12 @@ export default {
 }
 
 .title-icon {
-  width: 150px;
+  width: 200px;
+  transition: transform 0.3s ease;
+}
+
+.title-icon:hover {
+  transform: scale(1.1);
 }
 
 .modules-container {
