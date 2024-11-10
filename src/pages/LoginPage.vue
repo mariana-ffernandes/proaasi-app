@@ -57,7 +57,6 @@ export default {
 };
 </script>
 
-
 <style scoped>
 .login-page {
   display: flex;
@@ -67,7 +66,15 @@ export default {
   background-color: #ffffff;
 }
 
+h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
 .login-container {
+  margin-top: 80px;
   background-color: #f0f0f0;
   padding: 40px;
   border-radius: 8px;
@@ -99,5 +106,49 @@ export default {
   padding: 10px 20px;
   border-radius: 4px;
   cursor: pointer;
+}
+
+@media (max-width: 1024px) {
+  .login-container {
+    width: 80%;
+    padding: 30px;
+  }
+  iframe {
+    width: 100%;
+    height: 800px;
+  }
+}
+
+@media (max-width: 768px) {
+  .login-container {
+    width: 90%;
+    padding: 20px;
+  }
+  .next-button,
+  .back-button {
+    padding: 8px 16px;
+  }
+  iframe {
+    height: 700px;
+  }
+}
+
+@media (max-width: 480px) {
+  .login-container {
+    width: 100%;
+    padding: 15px;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+  .next-button,
+  .back-button {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+  iframe {
+    height: 600px;
+  }
 }
 </style>
