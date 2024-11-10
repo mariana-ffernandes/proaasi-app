@@ -69,12 +69,11 @@ export default {
 h2 {
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
-  margin-top: 30px;
+  margin-top: 100px;
   margin-bottom: 30px;
 }
 
 .login-container {
-  margin-top: 80px;
   background-color: #f0f0f0;
   padding: 40px;
   border-radius: 8px;

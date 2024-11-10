@@ -106,12 +106,12 @@ Para escolher o aparelho auditivo certo para o paciente, avaliam-se vários crit
 }
 
 .video-iframe {
-  position: absolute;
+  position: flex;
   top: 40px;
   right: 40px;
   background-color: #007b7f;
-  width: 340px;
-  height: 190px;
+  width: 50%;
+  height: 50vh;
   padding: 10px;
   border-radius: 10px;
   color: #ffffff;
@@ -122,7 +122,7 @@ Para escolher o aparelho auditivo certo para o paciente, avaliam-se vários crit
   font-size: 20px;
   font-weight: 600;
   text-align: left;
-  margin: 120px 40px 40px 40px;
+  margin: 60px 40px 40px 40px;
   padding: 20px;
   background-color: #f0f8ff;
   border-radius: 10px;
